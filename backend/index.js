@@ -18,8 +18,8 @@ mongoose
   .connect(process.env.MONGODB_URI)
   .then(() => console.log("✅ MongoDB connected"))
   .catch((err) => console.log(err));
-
-/* ================= HOME ================= */
+  
+  /* ================= HOME ================= */
 
 app.get("/", (req, res) => {
   res.send("🌤 Weather Backend Running");
