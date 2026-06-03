@@ -3,12 +3,12 @@
   "name": "Weather Forecast App",
   "icons": [
     {
-      "src": "https://res.cloudinary.com/dp2h1zqb4/image/upload/v1780496179/e80bed7e-e1a2-4000-801f-c2c21520b65f_mbhmzm.png",
+      "src": "https://res.cloudinary.com/dp2h1zqb4/image/upload/v1780497591/weth_wqajwu.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "https://res.cloudinary.com/dp2h1zqb4/image/upload/v1780496179/e80bed7e-e1a2-4000-801f-c2c21520b65f_mbhmzm.png",
+      "src": "https://res.cloudinary.com/dp2h1zqb4/image/upload/v1780497591/weth_wqajwu.png",
       "sizes": "512x512",
       "type": "image/png"
     }
