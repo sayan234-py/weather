@@ -5,7 +5,7 @@ const axios = require("axios");
 require("dotenv").config();
 
 const app = express();
-const PORT = 5001;
+const PORT = process.env.PORT || 5001;
 
 /* ================= MIDDLEWARE ================= */
 
@@ -15,7 +15,7 @@ app.use(cors());
 /* ================= MONGODB ================= */
 
 mongoose
-  .connect("mongodb://127.0.0.1:27017/weather")
+  .connect(process.env.MONGODB_URI)
   .then(() => console.log("✅ MongoDB connected"))
   .catch((err) => console.log(err));
 
