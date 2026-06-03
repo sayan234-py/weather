@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import "./App.css";
 
 /* ── EPA index → human label ── */
@@ -14,30 +14,30 @@ function App() {
 
   /* ================= FETCH ================= */
 
-  const fetchWeather = async () => {
-    try {
-      setLoading(true);
-      setError("");
+  const fetchWeather = useCallback(async () => {
+  try {
+    setLoading(true);
+    setError("");
 
-      const response = await fetch(`http://localhost:5001/weather/${city}`);
-      const data = await response.json();
+    const response = await fetch(`https://weather-3p1m.onrender.com/weather/${city}`);
+    const data = await response.json();
 
-      if (data.error) {
-        setError(data.error);
-        setWeather(null);
-      } else {
-        setWeather(data);
-      }
-
-      setLoading(false);
-    } catch (err) {
-      console.log(err);
-      setError("Failed to fetch weather data");
-      setLoading(false);
+    if (data.error) {
+      setError(data.error);
+      setWeather(null);
+    } else {
+      setWeather(data);
     }
-  };
 
-  useEffect(() => { fetchWeather(); }, [city]);
+    setLoading(false);
+  } catch (err) {
+    console.log(err);
+    setError("Failed to fetch weather data");
+    setLoading(false);
+  }
+}, [city]);
+
+useEffect(() => { fetchWeather(); }, [fetchWeather]);
 
   const handleSearch = () => {
     if (search.trim()) setCity(search.trim());
