@@ -2,7 +2,7 @@
 
 A full-stack weather application built with **React** (frontend) and **Express + Node.js** (backend), powered by the **WeatherAPI.com** forecast API. Features a deep-sky glassmorphism UI with aurora gradient accents, real-time weather data, 7-day forecasts, air quality index, and astronomical data.
 
-🔗 **Live Backend:** [weather-3p1m.onrender.com](https://weather-3p1m.onrender.com)
+🔗 **Live Backend:** [weather-3p1m.onrender.com](https://weather-1-3m7p.onrender.com)
 
 ---
 
